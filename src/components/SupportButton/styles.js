@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const Button = styled.button`
-  background-color: #000;
-  border: 1px solid #00fbff96;
+  border: 1px solid rgba(255, 255, 255, 0.29);
   border-radius: 8px;
   padding: 12px;
   width: clamp(200px, 80vw, 320px); 
@@ -21,22 +20,45 @@ export const Button = styled.button`
   color: #fff;
   cursor: pointer;
   overflow: hidden;
-  transition: color 0.3s ease;
+  transition: 1s;
+  background: linear-gradient(318deg, #2814da2b, #ffb30053, #ff00d93d, #00aaff34, #0000002b);
+  background-size: 1000% 1000%;
 
-  background-image: linear-gradient(to right, #00fbff96 0%, #0095ff8b 0%, #000 100%);
-  background-size: 200% 150%;
-  background-position: right bottom;
-  transition: background-position 0.4s ease-out, color 0.3s ease;
+-webkit-animation: Coolgradient 41s linear infinite;
+-moz-animation: Coolgradient 41s linear infinite;
+-o-animation: Coolgradient 41s linear infinite;
+animation: Coolgradient 41s linear infinite;
+
+@-webkit-keyframes Coolgradient {
+    0%{background-position:5% 0%}
+    50%{background-position:96% 100%}
+    100%{background-position:5% 0%}
+}
+@-moz-keyframes Coolgradient {
+    0%{background-position:5% 0%}
+    50%{background-position:96% 100%}
+    100%{background-position:5% 0%}
+}
+@-o-keyframes Coolgradient {
+    0%{background-position:5% 0%}
+    50%{background-position:96% 100%}
+    100%{background-position:5% 0%}
+}
+@keyframes Coolgradient { 
+    0%{background-position:5% 0%}
+    50%{background-position:96% 100%}
+    100%{background-position:5% 0%}
+}
 
   h2 {
     font-size: 17px;
-    color: #00fbff96;
+    color: #ffd500ff;
     transition: color 0.3s ease;
   }
 
   i {
     font-size: 30px;
-    color: #00fbff96;
+    color: #ffd500ff;
     transition: color 0.3s ease;
   }
 

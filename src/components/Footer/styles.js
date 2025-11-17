@@ -22,9 +22,8 @@ export const ContainerFooter = styled.footer`
   li{
     a{
       text-decoration: none;
-      color: #fff;
        &:hover{
-        color: #00fbff96;
+        color: #ffd500ff;
       }
      }
     }
@@ -37,20 +36,18 @@ export const ContainerFooter = styled.footer`
     gap: 20px;
 
     i{
-      color: #fff;
       font-size: 20px;
       transition: 0.5s;
       cursor: pointer;
 
       &:hover{
         transform: scale(1.5);
-        color: #00fbff96;
+        color: #ffd500ff;
       }
     }
   }
 `;
 
 export const Text = styled.div`
-    color: #fff;
     max-width: 500px;
 `;

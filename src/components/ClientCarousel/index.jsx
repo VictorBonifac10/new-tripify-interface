@@ -1,13 +1,11 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import { EffectCoverflow, Pagination, FreeMode } from 'swiper/modules';
 import { depoiments } from '../../data/depoiments';
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-
-import Person from '../../assets/person.jpg'
+import 'swiper/css/free-mode';
 
 import { ContainerCarousel } from './styles'
 
@@ -16,30 +14,22 @@ export function ClientCarousel() {
     return (
         <ContainerCarousel>
             <Swiper
-                effect={'coverflow'}
-                grabCursor={true}
-                centeredSlides={true}
-                slidesPerView={'auto'}
-                initialSlide={1}
-                coverflowEffect={{
-                    rotate: 50,
-                    stretch: 0,
-                    depth: 100,
-                    modifier: 1,
+                slidesPerView={3}
+                spaceBetween={30}
+                freeMode={true}
+                pagination={{
+                    clickable: true,
                 }}
-                pagination={true}
-                navigation={true}
-                modules={[EffectCoverflow, Pagination, Navigation]}
+                modules={[FreeMode, Pagination]}
                 className="mySwiper"
-
             >
                 {depoiments.map((data) => (
                     <SwiperSlide>
                         <div className='clientCard'>
                             <img src={data.url} alt="Foto do Cliente" />
-                            <p><b>{data.company}</b></p>
+                            <h3>{data.client}</h3>
                             <p>{data.depoiment}</p>
-                            <h3>{data.owner} - <span>{data.occupation}</span></h3>
+                            <p><b>{data.loyalty}</b></p>
                         </div>
                     </SwiperSlide>
                 ))}

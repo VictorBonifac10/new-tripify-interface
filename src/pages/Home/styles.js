@@ -211,7 +211,6 @@ export const ContainerAbout = styled.div`
 `;
 
 export const Text = styled.div`
-    color: #fff;
     max-width: 500px;
 `;
 
@@ -231,7 +230,6 @@ export const ContainerPortfolio = styled.div`
   width: 100%;
   overflow: hidden;
   margin: 100px 0 0 0;
-  padding: 80px 50px 80px 150px;
   color: #fff;
 
   video {
@@ -245,19 +243,87 @@ export const ContainerPortfolio = styled.div`
   }
 
   .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     position: relative;
     z-index: 2;
-    max-width: 800px;
+    padding: 30px;
   }
 
   .custom-button{
-    width: 15%;
+    max-width: 50%;
   }
   
   @media (max-width: 850px) {
       padding: 50px 20px;
       margin-top: 50px;
   }
+`;
+
+export const OfferContainer = styled.div`
+  display: grid;
+  font-size: 14px;
+  margin: 20px;
+  padding: 10px;
+  background-color: red;
+
+.swiper {
+  width: 100%;
+  height: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px 20px;
+  background-color: pink;
+}
+
+.swiper-slide {
+  display: flex;  /* Evita esticar horizontalmente */
+  align-items: flex-start;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  height: 900px; 
+
+  img{
+  width: 220px;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  }
+
+  article{
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+    h2{
+      color: #ffd500ff;
+      font-size: 15px;
+    }
+
+    div{
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      gap: 15px;
+
+      p{
+        background-color: #ffd500ff;
+        color: #fff;
+        padding: 5px;
+        margin: 0;
+        border-radius: 50px;
+      }
+    }
+  }
+
+}
+
 `;
 
 export const Mask = styled.div`
@@ -290,10 +356,17 @@ export const ContainerClients = styled.div`
 
 export const ContainerContact = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 230px;
+  align-items: center;
+  gap: 30px;
   width: 100%;
   margin-bottom: 200px;
+
+  .content{
+    display: flex;
+    gap: 190px;
+  }
 
   .content-contact-card{
     display: flex;

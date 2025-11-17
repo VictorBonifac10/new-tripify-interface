@@ -1,4 +1,4 @@
-import { packages } from '../../data/packages.js'
+import { categories } from '../../data/categories.js'
 
 import { CardGrid, Card, CardTitle, CardBanner, Mask } from './styles'
 
@@ -6,7 +6,7 @@ export function ServicesCards() {
   return (
 
     <CardGrid>
-      {packages.map(data => (
+      {categories.map(data => (
         <Card>
           <CardBanner>
             <img src={data.url} alt="Viagens Nacionais" />

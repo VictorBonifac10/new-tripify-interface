@@ -37,7 +37,27 @@ export function Header() {
                     </CNavItem>
                     <CNavItem>
                         <StyledNavLink href="/portfolio" $isActive={pathname === '/portfolio'}>
-                            Portfólio
+                            Viagens
+                        </StyledNavLink>
+                    </CNavItem>
+                    <CNavItem>
+                        <StyledNavLink href="/portfolio" $isActive={pathname === '/portfolio'}>
+                            Pacotes
+                        </StyledNavLink>
+                    </CNavItem>
+                    <CNavItem>
+                        <StyledNavLink href="/portfolio" $isActive={pathname === '/portfolio'}>
+                            Ofertas
+                        </StyledNavLink>
+                    </CNavItem>
+                    <CNavItem>
+                        <StyledNavLink href="/portfolio" $isActive={pathname === '/portfolio'}>
+                            Clientes
+                        </StyledNavLink>
+                    </CNavItem>
+                    <CNavItem>
+                        <StyledNavLink href="/portfolio" $isActive={pathname === '/portfolio'}>
+                            Contato
                         </StyledNavLink>
                     </CNavItem>
                 </CNavbarNav>
@@ -69,7 +89,27 @@ export function Header() {
                             </CNavItem>
                             <CNavItem>
                                 <StyledNavLink href="/portfolio" $isActive={pathname === '/portfolio'}>
-                                    Portfólio
+                                    Viagens
+                                </StyledNavLink>
+                            </CNavItem>
+                            <CNavItem>
+                                <StyledNavLink href="/portfolio" $isActive={pathname === '/portfolio'}>
+                                    Pacotes
+                                </StyledNavLink>
+                            </CNavItem>
+                            <CNavItem>
+                                <StyledNavLink href="/portfolio" $isActive={pathname === '/portfolio'}>
+                                    Ofertas
+                                </StyledNavLink>
+                            </CNavItem>
+                            <CNavItem>
+                                <StyledNavLink href="/portfolio" $isActive={pathname === '/portfolio'}>
+                                    Clientes
+                                </StyledNavLink>
+                            </CNavItem>
+                            <CNavItem>
+                                <StyledNavLink href="/portfolio" $isActive={pathname === '/portfolio'}>
+                                    Contato
                                 </StyledNavLink>
                             </CNavItem>
                         </CNavbarNav>

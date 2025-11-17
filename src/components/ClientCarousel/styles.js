@@ -52,6 +52,7 @@ export const ContainerCarousel = styled.div`
 .clientCard{
   max-width: 400px;
   width: 100%;
+  height: 350px;
   border: 1px solid rgba(255, 255, 255, 0.29);
   padding: 20px;
   display: flex;
@@ -60,7 +61,7 @@ export const ContainerCarousel = styled.div`
   text-align: center;
   border-radius: 15px;
   transition: 1s;
-  background: linear-gradient(318deg, #2814da2b, #c012a627, #00aaff34, #1b1b1b3e, #0000002b);
+  background: linear-gradient(318deg, #2814da2b, #ffb30053, #ff00d93d, #00aaff34, #0000002b);
   background-size: 1000% 1000%;
   
 -webkit-animation: Coolgradient 41s linear infinite;
