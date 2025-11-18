@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- CSS offset-path example -->
+    <style>
+        .sky {
+            background: linear-gradient(#87CEEB, #cfefff);
+            height: 240px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .plane {
+            position: absolute;
+            width: 80px;
+            height: 40px;
+            transform-origin: 50% 50%;
+            background-image: url("./src/assets/plane.svg");
+            background-size: contain;
+
+
+            /* --- ANIMAÇÃO DO "FLUTUAR" --- */
+            animation: float 4s ease-in-out infinite;
+
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+    <div class="sky">
+        <div class="plane" aria-hidden="true"></div>
+    </div>
+
+
+</body>
+
+</html>

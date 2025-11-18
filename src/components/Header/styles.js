@@ -65,10 +65,12 @@ export const StyledNavbarToggler = styled(CNavbarToggler)`
 `
 
 export const StyledNavLink = styled(CNavLink)`
-color: ${props => (props.$isActive ? '#ffd500ff !important' : '#FFFFFF !important')};  border-bottom: ${props => (props.$isActive ? `2px solid #ffd500ff` : 'none')};
-  display: inline-block;
+
+  color: #ffd500ff;
+  padding: 10px 0px 3px 0px;
 
   &:hover{
-    color: #ffd500ff;
+    color: #fff700ff;
+    border-bottom: 2px solid #fff700ff;
   }
 `

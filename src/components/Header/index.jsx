@@ -60,6 +60,16 @@ export function Header() {
                             Contato
                         </StyledNavLink>
                     </CNavItem>
+                    <CNavItem>
+                        <StyledNavLink href="/portfolio" $isActive={pathname === '/portfolio'}>
+                            <i class="ri-shopping-cart-line"></i>
+                        </StyledNavLink>
+                    </CNavItem>
+                    <CNavItem>
+                        <StyledNavLink href="/portfolio" $isActive={pathname === '/portfolio'}>
+                            <i class="ri-heart-line"></i>
+                        </StyledNavLink>
+                    </CNavItem>
                 </CNavbarNav>
 
                 <StyledNavbarToggler
@@ -109,7 +119,12 @@ export function Header() {
                             </CNavItem>
                             <CNavItem>
                                 <StyledNavLink href="/portfolio" $isActive={pathname === '/portfolio'}>
-                                    Contato
+                                    <i class="ri-shopping-cart-line"></i>
+                                </StyledNavLink>
+                            </CNavItem>
+                            <CNavItem>
+                                <StyledNavLink href="/portfolio" $isActive={pathname === '/portfolio'}>
+                                    <i class="ri-shopping-cart-line"></i>
                                 </StyledNavLink>
                             </CNavItem>
                         </CNavbarNav>

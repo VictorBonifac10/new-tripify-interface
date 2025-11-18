@@ -33,7 +33,7 @@ export function Footer() {
                 <i className="ri-instagram-line"></i>
             </div>
             <Text>
-                © 2025 evolve solutions - All rights reserved.
+                © 2025 Tripify Viagens - All rights reserved.
             </Text>
         </ContainerFooter>
 

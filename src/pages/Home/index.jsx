@@ -1,26 +1,12 @@
-// Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Swiper styles
-import 'swiper/css';
-import 'swiper/css/grid';
-import 'swiper/css/pagination';
-
-// Swiper modules
-import { Grid, Pagination } from 'swiper/modules';
-
-// Data
-
-import { packages } from '../../data/packages';
-
 // Components
-import { Button, ClientCarousel, Footer, Header, ScrollIndicator, ServicesCards, SupportButton, Title } from "../../components";
+import { Button, ClientCarousel, Footer, Header, ScrollIndicator, ServicesCards, SupportButton, Title, OfferCarousel } from "../../components";
 
 // Tags from Styles
 import { ContainerBody, Banner, ContainerTop, ContentLeft, ContentRight, FirstDescription, SecondDescription, ContainerMain, Text, ContainerServices, ContainerPortfolio, Mask, ContainerClients, ContainerContact, ContactCard, OfferContainer } from "./styles";
 
 // Medias
 import Logo from '../../assets/Logo.svg'
+import Plane from '../../assets/plane.svg'
 import videoBanner from '../../assets/videoBanner.mp4'
 import videoBanner2 from '../../assets/videoBanner2.mp4'
 
@@ -34,14 +20,14 @@ export function Home() {
                 <Banner>
                     <video src={videoBanner} preload="none" autoPlay muted loop></video>
                     <Mask />
-                    <div className="containerBanner">
+                    <div className="bannerContainer">
                         <ContentLeft>
                             <img src={Logo} alt='Logo da Empresa' />
                             <FirstDescription>
-                                Viaje com conforto, segurança e as melhores condições.
+                                Viaje com conforto, segurança e as melhores condições de voo.
                             </FirstDescription>
                             <SecondDescription>
-                                Montamos roteiros exclusivos com custo-benefício ideal para você viajar mais e melhor.
+                                Buscamos as mais íncriveis opções de voos, cruzeiros, resorts e experiências com um ótimo custo-benefício para você e sua família.
                             </SecondDescription>
                             <div className="custom-button">
                                 <Button href="#services">
@@ -52,7 +38,7 @@ export function Home() {
                         </ContentLeft>
                         <ContentRight>
                             <i className="ri-whatsapp-line"></i>
-                            <i className="ri-google-line"></i>
+                            <i class="ri-mail-line"></i>
                             <i className="ri-instagram-line"></i>
                         </ContentRight>
                     </div>
@@ -68,11 +54,11 @@ export function Home() {
                     <video src={videoBanner2} preload="none" autoPlay muted loop></video>
                     <Mask />
                     <div className="content">
-                        <Title subtitle="Acesse nosso catálogo e vamos orçar tudo pra você rapidinho">Catálogo</Title>
+                        <Title subtitle="Acesse todos os nossos pacotes e faça um orçamento">Pacotes</Title>
                         <Text>
-                            Clique em "Veja mais" e tenha acesso a todos os nossos serviços, desde sites institucionais e landing pages até estratégias para fortalecer sua presença online. Cada projeto é desenvolvido com atenção aos detalhes, design moderno e funcionalidade, garantindo que sua marca se destaque e conquiste resultados reais.
+                            Clique em "Veja mais" e descubra todos os nossos pacotes de viagem, incluindo destinos nacionais, internacionais, cruzeiros, roteiros personalizados e muito mais. Cada experiência foi planejada com cuidado para oferecer conforto, segurança e excelente custo-benefício.
                             <br /><br />
-                            Explore nosso portfólio e descubra como podemos impulsionar sua presença digital de forma autêntica e eficiente.
+                            Explore nossas opções e encontre o pacote ideal para a sua próxima aventura — com suporte especializado, condições exclusivas e toda a tranquilidade que você merece ao viajar.
                         </Text>
                         <br />
                         <div className="custom-button">
@@ -82,37 +68,7 @@ export function Home() {
                 </ContainerPortfolio>
                 <OfferContainer>
                     <Title subtitle="Aproveite nossas ofertas e garanta os melhores descontos">Ofertas</Title>
-
-                    <Swiper
-                        slidesPerView={3}
-                        grid={{
-                            rows: 2,
-                        }}
-                        spaceBetween={30}
-                        pagination={{
-                            clickable: true,
-                        }}
-                        modules={[Grid, Pagination]}
-                        className="mySwiper"
-                    >
-                        {packages
-                            .filter(item => item.offer) // ou item.offer === true
-                            .map(data => (
-                                <SwiperSlide>
-                                    <img src={data.img} alt="empresa" />
-                                    <article>
-                                        <h2>{data.destination}</h2>
-                                        <p>{data.description}</p>
-                                        <div>
-                                            <span>2.00,00</span>
-                                            <p>x2 pessoas</p>
-                                        </div>
-                                        <Button variant='secondary'>Comprar</Button>
-                                    </article>
-                                </SwiperSlide>
-                            ))}
-
-                    </Swiper>
+                    <OfferCarousel />
                 </OfferContainer>
                 <ContainerClients>
                     <Title subtitle="Veja as opiniões de nossos clientes sobre nossos serviços">Clientes</Title>
@@ -120,15 +76,20 @@ export function Home() {
                 </ContainerClients>
                 <ContainerContact id="contact">
                     <Title subtitle="Entre em contato conosco, sem compromisso">Contato</Title>
-                    <div className="content">
-                        <Text>
-                            Seja para tirar dúvidas, solicitar um orçamento ou iniciar um projeto, nossa equipe está sempre pronta para ouvir suas ideias e oferecer o ideal para o seu negócio.
-                            <br /><br />
-                            Portanto, envie-nos uma mensagem e agarre agora mesmo a oportunidade de criar experiências digitais únicas e que conectam sua marca ao público certo.
-                            <br /><br />
-                            Vamos juntos rumo à evolução da sua presença online!
-                        </Text>
-                        <div className="content-contact-card">
+                    <div className="contactContent">
+                        <div className="leftContent">
+                            <Text>
+                                Seja para tirar dúvidas, solicitar um orçamento ou iniciar um projeto, nossa equipe está sempre pronta para ouvir suas ideias e oferecer o ideal para o seu negócio.
+                                <br /><br />
+                                Portanto, envie-nos uma mensagem e agarre agora mesmo a oportunidade de criar experiências digitais únicas e que conectam sua marca ao público certo.
+                                <br /><br />
+                                Vamos juntos rumo à evolução da sua presença online!
+                            </Text>
+                            <div class="plane" aria-hidden="true">
+                                <img src={Plane} alt='Avião' />
+                            </div>
+                        </div>
+                        <div className="rightContent">
                             <ContactCard>
                                 <div>
                                     <i className="ri-whatsapp-line"></i>
@@ -138,7 +99,7 @@ export function Home() {
                             </ContactCard>
                             <ContactCard>
                                 <div>
-                                    <i className="ri-google-line"></i>
+                                    <i class="ri-mail-line"></i>
                                     <h3>Email</h3>
                                 </div>
                                 <p>contato@tripifyviagens.com.br</p>

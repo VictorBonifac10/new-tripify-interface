@@ -1,8 +1,6 @@
 import { styled } from 'styled-components'
 
-export const ContainerBody = styled.div`
-
-`;
+export const ContainerBody = styled.div``;
 
 export const ContainerTop = styled.div`
     width: 100%;
@@ -21,10 +19,12 @@ export const ContainerTop = styled.div`
         }
     }
 
-    .containerBanner{
+    .bannerContainer{
 
         display: flex;
+        justify-content: center;
         align-items: center;
+        gap: 90px;
         
         @media (max-width: 1085px) {
             flex-direction: column;
@@ -117,7 +117,7 @@ export const ContentRight = styled.div`
 
         &:hover{
         transform: scale(1.5);
-        color: #00fbff96;
+        color: #ffd500ff;
       }
     }
 
@@ -130,84 +130,6 @@ export const ContentRight = styled.div`
 `;
 
 export const ContainerMain = styled.main`
-`;
-
-export const ContainerAbout = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    gap: 120px;
-
-  @media (max-width: 1300px) {
-    flex-direction: column;
-    gap: 90px;
-    margin-top: 80px;
-  }
-
-  .aboutText{
-      @media (max-width: 1300px) {
-        text-align: center;
-        padding: 30px;
-      }
-  }
-
-  .aboutImage {
-    position: relative;
-    width: 450px;
-    height: 450px;
-}
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    display: block;
-  }
-
-  /* animate circle */
-
-  .rotating-container {
-    position: absolute;
-    top: -85px;   
-    right: -75px;
-    z-index: 2;
-    width: 200px;
-    height: 200px;
-    animation: rotate-text 10s linear infinite;
-  }
-
-  .inner-circle {
-    fill: #00fbff96;
-  }
-
-  #text-on-path {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    fill: #00fbff96;
-  }
-
-  @keyframes rotate-text {
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-  @media (max-width: 600px) {
-    .aboutImage {
-      width: auto;
-      height: 400px;
-    }
-    
-    .rotating-container{
-      right: 280px;
-    }
-}
-
 `;
 
 export const Text = styled.div`
@@ -264,72 +186,12 @@ export const ContainerPortfolio = styled.div`
 `;
 
 export const OfferContainer = styled.div`
-  display: grid;
-  font-size: 14px;
   margin: 20px;
   padding: 10px;
-  background-color: red;
-
-.swiper {
-  width: 100%;
-  height: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 40px 20px;
-  background-color: pink;
-}
-
-.swiper-slide {
-  display: flex;  /* Evita esticar horizontalmente */
-  align-items: flex-start;
-  border-radius: 20px;
-  background: #fff;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
-  height: 900px; 
-
-  img{
-  width: 220px;
-  height: 200px;
-  object-fit: cover;
-  border-top-left-radius: 20px;
-  }
-
-  article{
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-
-    h2{
-      color: #ffd500ff;
-      font-size: 15px;
-    }
-
-    div{
-      display: flex;
-      align-items: center;
-      margin-bottom: 20px;
-      gap: 15px;
-
-      p{
-        background-color: #ffd500ff;
-        color: #fff;
-        padding: 5px;
-        margin: 0;
-        border-radius: 50px;
-      }
-    }
-  }
-
-}
-
 `;
 
 export const Mask = styled.div`
-
   background: linear-gradient(109deg, rgba(19, 19, 19, 0.85) 15%, rgba(19,19, 19, 0.27) 50%,rgba(89, 111, 151, 0) 85%);
-/*background: linear-gradient(109deg, rgba(10, 12, 16, 0.9) 15%, rgba(10, 12, 16, 0.21) 50%, rgba(10, 12, 16, 0.9) 85%);*/
   position: absolute;
   top: 0;
   left: 0;
@@ -363,12 +225,34 @@ export const ContainerContact = styled.div`
   width: 100%;
   margin-bottom: 200px;
 
-  .content{
+  .contactContent{
     display: flex;
-    gap: 190px;
+    justify-content: center;
+    gap: 100px;
+    text-align: start;
+
+    .plane {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+
+      img{
+        padding: 20px;
+        width: 200px;
+        animation: float 6s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%, 100% {transform: translateY(20);} 50% {transform: translateY(-30px);}
+      }
+    }
   }
 
-  .content-contact-card{
+  .leftContent{
+  }
+
+  .rightContent{
     display: flex;
     flex-direction: column;
     gap: 35px;
