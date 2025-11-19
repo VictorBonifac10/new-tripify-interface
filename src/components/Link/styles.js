@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ContainerButton = styled.a`
+export const LinkContainer = styled.a`
     background-color: ${(props) => (props.variant === "secondary" ? "#ffd500ff" : "#fff")};
     border: ${(props) => (props.variant === "secondary" ? "1px solid #ffd500ff" : "none")};
     color: ${(props) => (props.variant === "secondary" ? "#fff" : "#000")};

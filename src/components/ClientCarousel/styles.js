@@ -38,10 +38,6 @@ export const ContainerCarousel = styled.div`
       }
   }
 
-.mySwiper .swiper-button-next:hover,
-.mySwiper .swiper-button-prev:hover {
-  color: #00fbff96;
-}
 
 .mySwiper .swiper-slide {
   display: flex;
@@ -115,6 +111,10 @@ animation: Coolgradient 41s linear infinite;
 
     @media (max-width: 650px) {
       padding: 10px;
+    }
+
+    b{
+      color: #ffd500ff;
     }
   }
 

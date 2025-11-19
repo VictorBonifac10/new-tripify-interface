@@ -1,57 +1,29 @@
 // Components
-import { Button, ClientCarousel, Footer, Header, ScrollIndicator, ServicesCards, SupportButton, Title, OfferCarousel } from "../../components";
+import { Link, Mask, ClientCarousel, Footer, ServicesCards, Title, OfferCarousel, TopBanner } from "../../components";
 
 // Tags from Styles
-import { ContainerBody, Banner, ContainerTop, ContentLeft, ContentRight, FirstDescription, SecondDescription, ContainerMain, Text, ContainerServices, ContainerPortfolio, Mask, ContainerClients, ContainerContact, ContactCard, OfferContainer } from "./styles";
+import { ContainerBody, ContainerMain, Text, ContainerServices, ContainerPortfolio, ContainerClients, ContainerContact, ContactCard, OfferContainer } from "./styles";
 
 // Medias
-import Logo from '../../assets/Logo.svg'
 import Plane from '../../assets/plane.svg'
 import videoBanner from '../../assets/videoBanner.mp4'
-import videoBanner2 from '../../assets/videoBanner2.mp4'
+import videoBanner3 from '../../assets/videoBanner3.mp4'
 
 export function Home() {
 
     return (
         <ContainerBody>
-            <Header />
-            <SupportButton />
-            <ContainerTop>
-                <Banner>
-                    <video src={videoBanner} preload="none" autoPlay muted loop></video>
-                    <Mask />
-                    <div className="bannerContainer">
-                        <ContentLeft>
-                            <img src={Logo} alt='Logo da Empresa' />
-                            <FirstDescription>
-                                Viaje com conforto, segurança e as melhores condições de voo.
-                            </FirstDescription>
-                            <SecondDescription>
-                                Buscamos as mais íncriveis opções de voos, cruzeiros, resorts e experiências com um ótimo custo-benefício para você e sua família.
-                            </SecondDescription>
-                            <div className="custom-button">
-                                <Button href="#services">
-                                    Veja mais
-                                    <i className="ri-arrow-right-down-long-line"></i>
-                                </Button>
-                            </div>
-                        </ContentLeft>
-                        <ContentRight>
-                            <i className="ri-whatsapp-line"></i>
-                            <i class="ri-mail-line"></i>
-                            <i className="ri-instagram-line"></i>
-                        </ContentRight>
-                    </div>
-                    <ScrollIndicator />
-                </Banner>
-            </ContainerTop>
+            <TopBanner
+                variantFirstDescription="Viaje com conforto, segurança e as melhores condições"
+                variantSecondDescription="Buscamos as mais íncriveis opções de voos, cruzeiros e experiências para você e sua família!"
+                video={videoBanner} />
             <ContainerMain>
                 <ContainerServices id="services">
                     <Title subtitle="Existem inumeros tipos de viagem que você pode fazer">Viagens</Title>
                     <ServicesCards />
                 </ContainerServices>
                 <ContainerPortfolio>
-                    <video src={videoBanner2} preload="none" autoPlay muted loop></video>
+                    <video src={videoBanner3} preload="none" autoPlay muted loop></video>
                     <Mask />
                     <div className="content">
                         <Title subtitle="Acesse todos os nossos pacotes e faça um orçamento">Pacotes</Title>
@@ -62,7 +34,7 @@ export function Home() {
                         </Text>
                         <br />
                         <div className="custom-button">
-                            <Button href="/portfolio">Veja mais <i className="ri-arrow-right-down-long-line"></i></Button>
+                            <Link href="/portfolio">Veja mais <i className="ri-arrow-right-down-long-line"></i></Link>
                         </div>
                     </div>
                 </ContainerPortfolio>
