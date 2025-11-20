@@ -42,7 +42,6 @@ export const GridCard = styled.div`
 export const Aside = styled.aside`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   width: 20%;
 
   @media (max-width: 850px) {

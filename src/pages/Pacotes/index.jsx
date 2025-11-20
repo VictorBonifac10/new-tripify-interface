@@ -2,35 +2,16 @@ import { PackageCard, Title, TopBanner } from "../../components";
 import { PackagesContainer, GridCard, Aside } from "./styles";
 
 import videoBanner2 from '../../assets/videoBanner2.mp4'
-import { useEffect, useRef } from "react";
-
-//import { useState } from "react";
-
-//import { packages } from "../../data/packages";
+import { useState } from "react";
+import { packages } from "../../data/packages";
 
 export function Pacotes() {
 
-    //const [packageCard, setPackageCard] = useState([]);
+    const [packageCard, setPackageCard] = useState('Todos');
 
-    //-------------------------------------------------
-    // Function Nacionais() --> Busca por pacotes de viagens nacionais
-    //-------------------------------------------------
-
-    const btnRef = useRef();
-
-    useEffect(() => {
-        let btn = btnRef.current;
-        btn.addEventListener('click', () => {
-            console.log(btn.value);
-        });
-
-        return () => btn.removeEventListener('click', () => { });
-    }, []);
-
-    //if (packages.filter(data => data.categorie === 'Viagens Nacionais').map(item => (
-    //    console.log(item.destination)
-    //)));
-
+    const changeStatePackageCard = (packageCard) => {
+        setPackageCard(packageCard);
+    }
 
     return (
         <>
@@ -42,16 +23,30 @@ export function Pacotes() {
                 <Title subtitle="Adicione ao seu carrinho para um orçamento mais detalhado.">Pacotes</Title>
                 <section>
                     <Aside>
-                        <button ref={btnRef} value="todos">Todos</button>
-                        <button value="nacionais">Viagens Nacionais</button>
-                        <button value="internacios">Viagens Internacionais</button>
-                        <button value="cruzeiros">Cruzeiros</button>
-                        <button value="resorts">Resorts & Relax</button>
-                        <button value="eventos">Eventos e Festivais</button>
-                        <button value="casais">Pacotes para Casais</button>
+                        <button onClick={() => changeStatePackageCard('Todos')}>Todos</button>
+                        <button onClick={() => changeStatePackageCard('Viagens Nacionais')}>Viagens Nacionais</button>
+                        <button onClick={() => changeStatePackageCard('Viagens Internacionais')}>Viagens Internacionais</button>
+                        <button onClick={() => changeStatePackageCard('Cruzeiros')}>Cruzeiros</button>
+                        <button onClick={() => changeStatePackageCard('Resorts & Relax')}>Resorts & Relax</button>
+                        <button onClick={() => changeStatePackageCard('Eventos e Festivais')}>Eventos e Festivais</button>
+                        <button onClick={() => changeStatePackageCard('Pacotes para Casais')}>Pacotes para Casais</button>
                     </Aside>
                     <GridCard>
-                        <PackageCard />
+                        {packages
+                            .filter(pkg => {
+                                if (packageCard === 'Todos') return true;   
+                                return pkg.categorie === packageCard;
+                            })
+                            .map(pkg => (
+                                <PackageCard
+                                    key={pkg.id}
+                                    Image={pkg.img}
+                                    Destination={pkg.destination}
+                                    Details={pkg.description}
+                                    Price={pkg.price}
+                                    Quantity={pkg.peopleQuantity} />
+                            ))
+                        }
                     </GridCard>
                 </section>
             </PackagesContainer >
