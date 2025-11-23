@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { Home, Pacotes } from '../pages'
+import { Cart, Home, Pacotes } from '../pages'
 
 export function Router() {
     return (
@@ -7,6 +7,7 @@ export function Router() {
         <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/pacotes' element={<Pacotes />} />
+            <Route path='/carrinho' element={<Cart />} />
         </Routes>
 
     )

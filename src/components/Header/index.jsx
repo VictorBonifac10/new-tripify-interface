@@ -61,7 +61,7 @@ export function Header() {
                         </StyledNavLink>
                     </CNavItem>
                     <CNavItem>
-                        <StyledNavLink href="/pacotes" $isActive={pathname === '/pacotes'}>
+                        <StyledNavLink href="/carrinho" $isActive={pathname === '/carrinho'}>
                             <i class="ri-shopping-cart-line"></i>
                         </StyledNavLink>
                     </CNavItem>
@@ -118,7 +118,7 @@ export function Header() {
                                 </StyledNavLink>
                             </CNavItem>
                             <CNavItem>
-                                <StyledNavLink href="/pacotes" $isActive={pathname === '/pacotes'}>
+                                <StyledNavLink href="/carrinho" $isActive={pathname === '/carrinho'}>
                                     <i class="ri-shopping-cart-line"></i>
                                 </StyledNavLink>
                             </CNavItem>

@@ -53,7 +53,6 @@ export const CardBanner = styled.div`
 `;
 
 export const Mask = styled.div`
-
   background: linear-gradient(200deg, rgba(255, 255, 255, 0) 15%, rgba(21, 98, 160, 0.21) 50%,rgba(255, 191, 0, 0.91) 85%);
   position: absolute;
   top: 0;

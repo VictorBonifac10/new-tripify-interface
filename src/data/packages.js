@@ -18,7 +18,7 @@ export const packages = [
         id: 1,
         img: nacionais,
         destination: 'Foz do Iguaçu',
-        description: 'Natureza impressionante e lindas cataratas',
+        description: 'Natureza fascinante e lindas cataratas',
         categorie: 'Viagens Nacionais',
         price: 2400,
         peopleQuantity: 2,

@@ -18,7 +18,6 @@ export const CartButtonContainer = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
-    justify-content: center;
     gap: 10px;
 
     p{
@@ -28,9 +27,4 @@ export const CartButtonContainer = styled.button`
     &:hover{
         background-color: #ffd500da;
     }
-
-  @media (max-width: 850px) {
-    width: 150px;
-  }
-
 `;
