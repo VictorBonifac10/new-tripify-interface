@@ -25,6 +25,6 @@ export const CartButtonContainer = styled.button`
     }
 
     &:hover{
-        background-color: #ffd500da;
+        background-color: #fff700ff;
     }
 `;

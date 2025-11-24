@@ -16,7 +16,7 @@ export function PackageCard({ Image, Destination, Details, Price, Quantity }) {
                     <span>{formatPrice(Price)}</span>
                     <p>x {Quantity} pessoas</p>
                 </div>
-                <CartButton />
+                <CartButton variant="Adicionar ao Carrinho" />
             </article>
         </Card>
     )

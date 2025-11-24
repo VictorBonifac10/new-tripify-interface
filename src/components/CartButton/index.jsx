@@ -1,9 +1,9 @@
 import { CartButtonContainer } from './styles'
 
-export function CartButton() {
+export function CartButton({ variant }) {
     return (
         <CartButtonContainer>
-            <p>Adicionar ao Carrinho</p>
+            {variant}
             <i class="ri-shopping-cart-line"></i>
         </CartButtonContainer>
     )

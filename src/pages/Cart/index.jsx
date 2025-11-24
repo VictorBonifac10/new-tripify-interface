@@ -10,7 +10,7 @@ export function Cart() {
         <>
             <Header />
             <PackagesContainer>
-                <Title subtitle="Sua viagem está peanas a um clique de distância.">Carrinho</Title>
+                <Title subtitle="Sua viagem está apenas a um clique de distância.">Carrinho</Title>
                 <CartGroup>
                     <img src={imgBanner} alt="Viagens" />
                     <div>
