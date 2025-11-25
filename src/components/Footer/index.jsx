@@ -15,16 +15,13 @@ export function Footer() {
                     <a href="/">Home</a>
                 </li>
                 <li>
-                    <a href="/portfolio">Viagens</a>
+                    <a href="/pacotes">Pacotes</a>
                 </li>
                 <li>
-                    <a href="#">Pacotes</a>
+                    <a href="/carrinho">Carrinho</a>
                 </li>
                 <li>
-                    <a href="#">Ofertas</a>
-                </li>
-                <li>
-                    <a href="#">Contato</a>
+                    <a href="/perfil">Perfil</a>
                 </li>
             </ul>
             <div>

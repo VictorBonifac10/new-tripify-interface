@@ -86,7 +86,7 @@ export const ContainerContact = styled.div`
   align-items: center;
   gap: 30px;
   width: 100%;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 
   .contactContent{
     display: flex;
@@ -109,6 +109,13 @@ export const ContainerContact = styled.div`
       @keyframes float {
         0%, 100% {transform: translateY(20);} 50% {transform: translateY(-30px);}
       }
+    }
+
+    @media(max-width: 850px){
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+        gap: 50px;
     }
   }
 

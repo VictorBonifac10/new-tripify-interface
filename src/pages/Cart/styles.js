@@ -23,11 +23,18 @@ export const CartGroup = styled.section`
     border-top-left-radius: 20px;
   };
 
-  div{
+  .listCartContainer{
     display: flex;
     justify-content: center;
-    background-color: #ffffffff;
+    background-color: #fff;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    @media(max-width: 1200px){
+      flex-direction: column;
+      align-items: center;
   }
+}
 `;
 
 export const ListCart = styled.section`
@@ -40,10 +47,15 @@ export const ListCart = styled.section`
   padding: 10px;
 
   border-bottom-left-radius: 20px;
+
+  @media(max-width: 1200px){
+    width:100%;
+  }
 `;
 
 export const ItemCart = styled.div`
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 60px;
   background-color: #fff;
@@ -57,6 +69,12 @@ export const ItemCart = styled.div`
     border-radius: 5px;
     width: 200px;
     height: 100px;
+
+  @media(max-width: 800px){
+    width: 100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
   }
 
   p{
@@ -68,6 +86,10 @@ export const ItemCart = styled.div`
     justify-content: center;
     align-items: center;
     gap: 10px;
+
+    @media(max-width: 800px){
+      margin: 10px;
+    }
 
     button{
       display: flex;
@@ -89,7 +111,12 @@ export const ItemCart = styled.div`
     p{
       margin: 0;
     }
+  }
 
+  @media(max-width: 800px){
+    flex-direction: column;
+    padding: 0;
+    gap: 13px;
   }
 `;
 
@@ -118,6 +145,16 @@ export const ResumeCart = styled.section`
     span{
       color: gray;
     }
+
+  @media(max-width: 450px){
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+  }
+  }
+
+  @media(max-width: 600px){
+    width: 100%;
   }
 `;
 

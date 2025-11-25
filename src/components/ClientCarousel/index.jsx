@@ -20,6 +20,12 @@ export function ClientCarousel() {
                 pagination={{
                     clickable: true,
                 }}
+                breakpoints={{
+                    1200: { slidesPerView: 3 },
+                    850: { slidesPerView: 2 },
+                    600: { slidesPerView: 1 },
+                    0: { slidesPerView: 1 },
+                }}
                 modules={[FreeMode, Pagination]}
                 className="mySwiper"
             >

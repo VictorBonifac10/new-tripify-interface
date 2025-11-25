@@ -1,4 +1,4 @@
-import { PackageCard, Title, TopBanner } from "../../components";
+import { Footer, PackageCard, Title, TopBanner } from "../../components";
 import { PackagesContainer, GridCard, Aside } from "./styles";
 
 import videoBanner2 from '../../assets/videoBanner2.mp4'
@@ -34,7 +34,7 @@ export function Pacotes() {
                     <GridCard>
                         {packages
                             .filter(pkg => {
-                                if (packageCard === 'Todos') return true;   
+                                if (packageCard === 'Todos') return true;
                                 return pkg.categorie === packageCard;
                             })
                             .map(pkg => (
@@ -50,6 +50,7 @@ export function Pacotes() {
                     </GridCard>
                 </section>
             </PackagesContainer >
+            <Footer />
         </>
     )
 }

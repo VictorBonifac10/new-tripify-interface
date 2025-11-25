@@ -99,7 +99,8 @@ animation: Coolgradient 41s linear infinite;
     margin-bottom: 15px;
 
     @media (max-width: 650px) {
-      width: 55%;
+      width: 90px;
+      height: 90px;
       padding: 10px;
     }
   }
@@ -132,5 +133,4 @@ animation: Coolgradient 41s linear infinite;
     padding: 0 20px;
   }
 }
-
 `;

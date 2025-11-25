@@ -7,7 +7,7 @@ export const ContainerTitle = styled.h2`
     align-items: center;
     text-align: center;
     gap: 1px;
-    margin: 0;
+    margin: 20px;
 
     h2{
         color: #ffd500ff;

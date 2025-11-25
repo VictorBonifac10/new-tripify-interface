@@ -37,27 +37,7 @@ export function Header() {
                     </CNavItem>
                     <CNavItem>
                         <StyledNavLink href="/pacotes" $isActive={pathname === '/pacotes'}>
-                            Viagens
-                        </StyledNavLink>
-                    </CNavItem>
-                    <CNavItem>
-                        <StyledNavLink href="/pacotes" $isActive={pathname === '/pacotes'}>
                             Pacotes
-                        </StyledNavLink>
-                    </CNavItem>
-                    <CNavItem>
-                        <StyledNavLink href="/pacotes" $isActive={pathname === '/pacotes'}>
-                            Ofertas
-                        </StyledNavLink>
-                    </CNavItem>
-                    <CNavItem>
-                        <StyledNavLink href="/pacotes" $isActive={pathname === '/pacotes'}>
-                            Clientes
-                        </StyledNavLink>
-                    </CNavItem>
-                    <CNavItem>
-                        <StyledNavLink href="/pacotes" $isActive={pathname === '/pacotes'}>
-                            Contato
                         </StyledNavLink>
                     </CNavItem>
                     <CNavItem>
@@ -99,22 +79,7 @@ export function Header() {
                             </CNavItem>
                             <CNavItem>
                                 <StyledNavLink href="/pacotes" $isActive={pathname === '/pacotes'}>
-                                    Viagens
-                                </StyledNavLink>
-                            </CNavItem>
-                            <CNavItem>
-                                <StyledNavLink href="/pacotes" $isActive={pathname === '/pacotes'}>
                                     Pacotes
-                                </StyledNavLink>
-                            </CNavItem>
-                            <CNavItem>
-                                <StyledNavLink href="/pacotes" $isActive={pathname === '/pacotes'}>
-                                    Ofertas
-                                </StyledNavLink>
-                            </CNavItem>
-                            <CNavItem>
-                                <StyledNavLink href="/pacotes" $isActive={pathname === '/pacotes'}>
-                                    Clientes
                                 </StyledNavLink>
                             </CNavItem>
                             <CNavItem>

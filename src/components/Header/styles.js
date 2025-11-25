@@ -29,13 +29,12 @@ export const StyledOffcanvas = styled(COffcanvas)`
   }
 
   .nav-link {
-    color: #fff !important;
+    color: #ffd500ff !important;
   }
 `
 
 export const StyledNavbarToggler = styled(CNavbarToggler)`
   border: none !important;
-  background: transparent !important;
 
   .navbar-toggler-icon {
     background-image: none;
@@ -43,6 +42,7 @@ export const StyledNavbarToggler = styled(CNavbarToggler)`
     width: 25px;
     height: 2px;
     background-color: white;
+
   }
 
   .navbar-toggler-icon::before,

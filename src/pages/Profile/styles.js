@@ -8,12 +8,16 @@ export const PackagesContainer = styled.div`
   margin: 100px 90px;
 `;
 
-export const CartGroup = styled.section`
+export const ProfileContainer = styled.section`
   width: 100%;
-  height: 100vh;
-  margin-bottom: 30px;
-  padding: 10px;
-  overflow: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
 
   img{
     width: 100%;
@@ -22,58 +26,47 @@ export const CartGroup = styled.section`
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
   };
-
-  div{
-    display: flex;
-    justify-content: center;
-    background-color: #ffffffff;
-  }
 `;
 
-export const ProfileSection = styled.section`
+export const FormContainer = styled.section`
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-
-  width: 50%;
+  gap: 100px;
+  width: 100%;
   height: 100%;
-  padding: 10px;
+  padding: 30px;
 
-  .formContainer{
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    gap: 50px;
+  img{
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+
+  @media(max-width: 950px){
+    width: 200px;
+    height: 200px;
+  }
   }
 
-  i{
-    color: #ffd500ff;
-    font-size: 95px;
+  @media(max-width: 950px){
+    flex-direction: column;
+    gap: 30px;
   }
+
 `;
 
 export const Form = styled.form`
-
   display: flex;
   gap: 25px;
   flex-direction: column;
-  align-items: center;
-
-  section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-  }
+  align-items: end;
 
   .inputContainer{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
     width: 100%;
-    gap: 10px;
   }
 
   label{
@@ -81,26 +74,10 @@ export const Form = styled.form`
   }
 
   input{
-    border: none;
+    border: 1px solid #f0f0f0ff;
     padding: 7px;
     border-radius: 6px;
     width: 80%;
-  }
-
-  .photo{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2px;
-  }
-
-  .infos{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
   }
 `;
 
@@ -110,20 +87,24 @@ export const Button = styled.button`
   border: none;
   border-radius: 8px;
   padding: 10px;
-  width: 50%;
+  width: 80%;
   transition: 0.5s all;
 
   &:hover{
-  background-color: #fff700ff;
+    background-color: #fff700ff;
   }
 `;
 
-export const ListCart = styled.section`
-  display: flex;
-  flex-direction: column;
+export const FavoriteList = styled.section`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
   padding: 10px;
   border-bottom-left-radius: 20px;
+
+  @media(max-width: 1200px){
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const ItemCart = styled.div`
@@ -144,12 +125,13 @@ export const ItemCart = styled.div`
     height: 100px;
   }
 
-  p{
-    margin: 0;
-  }
+  @media(max-width: 950px){
+    flex-direction: column;
+    gap: 8px;
 
   .customCartButton{
-    width: 8%;
+    width: 100%;
+  }
   }
 `;
 
