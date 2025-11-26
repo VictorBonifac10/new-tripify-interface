@@ -66,11 +66,33 @@ export const StyledNavbarToggler = styled(CNavbarToggler)`
 
 export const StyledNavLink = styled(CNavLink)`
 
+  display: flex;
+  gap: 10px;
   color: #ffd500ff;
   padding: 10px 0px 3px 0px;
+
+  p{
+    margin: 0;
+    padding: 0;
+  }
 
   &:hover{
     color: #fff700ff;
     border-bottom: 2px solid #fff700ff;
   }
 `
+
+export const LogoutButton = styled.button`
+  display: flex;
+  gap: 10px;
+  padding: 10px 0px 3px 0px;
+  color: #ff6200ff;
+  background: none;
+  border: none;
+
+  &:hover{
+    color: #ff5100ff;
+    border-bottom: 2px solid #ff6200ff;
+  }
+
+`;

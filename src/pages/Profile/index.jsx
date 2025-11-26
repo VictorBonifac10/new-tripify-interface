@@ -45,7 +45,7 @@ export function Profile() {
                 <Title>Favoritos</Title>
                 <FavoriteList>
                     <ItemCart>
-                        <FavoriteButton className="i" />
+                        <FavoriteButton />
                         <img src={img} alt="Viagens" />
                         <p>Rio de Janeiro</p>
                         <p>{formatPrice(800)}</p>
@@ -54,7 +54,7 @@ export function Profile() {
                         </div>
                     </ItemCart>
                     <ItemCart>
-                        <FavoriteButton className="i" />
+                        <FavoriteButton />
                         <img src={img} alt="Viagens" />
                         <p>Rio de Janeiro</p>
                         <p>{formatPrice(800)}</p>
@@ -63,7 +63,7 @@ export function Profile() {
                         </div>
                     </ItemCart>
                     <ItemCart>
-                        <FavoriteButton className="i" />
+                        <FavoriteButton />
                         <img src={img} alt="Viagens" />
                         <p>Rio de Janeiro</p>
                         <p>{formatPrice(800)}</p>
@@ -72,7 +72,7 @@ export function Profile() {
                         </div>
                     </ItemCart>
                     <ItemCart>
-                        <FavoriteButton className="i" />
+                        <FavoriteButton />
                         <img src={img} alt="Viagens" />
                         <p>Rio de Janeiro</p>
                         <p>{formatPrice(1500)}</p>

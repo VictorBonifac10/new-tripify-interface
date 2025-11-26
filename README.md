@@ -1,16 +1,44 @@
-# React + Vite
+## ✈️ Tripify Viagens
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+E-commerce de pacotes de viagens, conectada à API back-end, com funcionalidades de cadastro e autenticação de usuários, listagem de produtos, categorias, imagens, etc.
 
-Currently, two official plugins are available:
+## 💻 Demonstração
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<img src="./src/assets/readme.png" alt="preview" width="500" />
 
-## React Compiler
+🔗 [Acesse aqui a versão online]()
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Recursos
 
-## Expanding the ESLint configuration
+- React.js (Biblioteca principal)
+- Vite (Ferramenta de build e desenvolvimento)
+- Styled-components (Estilização com CSS-in-JS)
+- Yarn (Gerenciamento de pacotes)
+- Axios (Consumo da API)
+- React Router DOM (Gerenciamento de rotas)
+- ESLint / Prettier (Padronização e formatação de código)
+- Webhooks (Integrações e sincronizações automáticas – se aplicável no futuro)
+- LocalStorage (Persistência de sessão do usuário)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧩 Funcionalidades
+
+- **Autenticação de Usuários**
+- Cadastro e Login com token JWT recebido do back-end
+- Controle de acesso a rotas privadas no front-end
+- Upload de imagem e Alteração de informações
+
+- **Aplicabilidade para Usúarios**
+- Listagem de pacotes e ofertas recebidos do back-end
+- Gestão de itens do carrinho e favoritos
+- Gestão de pagamento com Stripe
+
+
+## 📌 Observações
+
+Este front-end consome o backend como fonte de dados e camadas de serviços, exibindo e manipulando informações via interface React. **Em Produção**
+
+<!--O projeto está finalizado e integra-se ao backend por meio de chamadas HTTP/REST. Back-end: [https://github.com/VictorBonifac10/devburger_api]-->
+
+## 📬 Contato
+- [GitHub Profile](https://github.com/VictorBonifac10)
+- [LinkedIn](https://www.linkedin.com/in/victor-alves-bonifacio/)

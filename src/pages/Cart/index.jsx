@@ -1,4 +1,4 @@
-import { Header, Title, OfferCarousel, Footer, SupportButton } from "../../components";
+import { Header, Title, OfferCarousel, Footer, SupportButton, TrashButton } from "../../components";
 import { PackagesContainer, CartGroup, ListCart, ResumeCart, ItemCart } from "./styles";
 
 import imgBanner from '../../assets/banner.png'
@@ -19,13 +19,14 @@ export function Cart() {
                             <Title>Itens</Title>
                             <ItemCart>
                                 <img src={img} alt="Viagens" />
-                                <p>Rio de Janeiro</p>
+                                <p>Resort All Inclusive Maceió</p>
                                 <p>{formatPrice(2900)}</p>
                                 <div>
                                     <button>-</button>
                                     <p>1</p>
                                     <button>+</button>
                                 </div>
+                                <TrashButton />
                             </ItemCart>
                             <ItemCart>
                                 <img src={img} alt="Viagens" />
@@ -36,6 +37,7 @@ export function Cart() {
                                     <p>1</p>
                                     <button>+</button>
                                 </div>
+                                <TrashButton />
                             </ItemCart>
                             <ItemCart>
                                 <img src={img} alt="Viagens" />
@@ -46,8 +48,8 @@ export function Cart() {
                                     <p>1</p>
                                     <button>+</button>
                                 </div>
+                                <TrashButton />
                             </ItemCart>
-
                         </ListCart>
                         <ResumeCart>
                             <Title>Resumo</Title>

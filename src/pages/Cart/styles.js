@@ -57,7 +57,7 @@ export const ItemCart = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 60px;
+  gap: 10px;
   background-color: #fff;
   box-shadow: 2px 2px 6px #7f7f7fa4;
   border-radius: 5px;

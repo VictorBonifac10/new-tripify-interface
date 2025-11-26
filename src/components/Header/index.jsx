@@ -11,7 +11,7 @@ import {
 } from '@coreui/react'
 import '@coreui/coreui/dist/css/coreui.min.css'
 
-import { StyledNavbar, StyledOffcanvas, StyledNavbarToggler, StyledNavLink } from './styles'
+import { StyledNavbar, StyledOffcanvas, StyledNavbarToggler, StyledNavLink, LogoutButton } from './styles'
 
 export function Header() {
     const [visible, setVisible] = useState(false)
@@ -43,12 +43,17 @@ export function Header() {
                     <CNavItem>
                         <StyledNavLink href="/carrinho" $isActive={pathname === '/carrinho'}>
                             <i class="ri-shopping-cart-line"></i>
+                            <p>Carrinho</p>
                         </StyledNavLink>
                     </CNavItem>
                     <CNavItem>
                         <StyledNavLink href="/perfil" $isActive={pathname === '/perfil'}>
                             <i class="ri-user-line"></i>
+                            <p>User</p>
                         </StyledNavLink>
+                    </CNavItem>
+                    <CNavItem>
+                        <LogoutButton><i class="ri-logout-circle-r-line"></i>Sair</LogoutButton>
                     </CNavItem>
                 </CNavbarNav>
 
@@ -67,7 +72,7 @@ export function Header() {
                     onHide={() => setVisible(false)}
                 >
                     <COffcanvasHeader>
-                        <COffcanvasTitle style={{ color: 'white' }}>Menu</COffcanvasTitle>
+                        <COffcanvasTitle style={{ color: '#ffd500ff' }}>Menu</COffcanvasTitle>
                         <CCloseButton className="text-reset" onClick={() => setVisible(false)} />
                     </COffcanvasHeader>
                     <COffcanvasBody>
@@ -85,12 +90,17 @@ export function Header() {
                             <CNavItem>
                                 <StyledNavLink href="/carrinho" $isActive={pathname === '/carrinho'}>
                                     <i class="ri-shopping-cart-line"></i>
+                                    <p>Carrinho</p>
                                 </StyledNavLink>
                             </CNavItem>
                             <CNavItem>
                                 <StyledNavLink href="/perfil" $isActive={pathname === '/perfil'}>
                                     <i class="ri-user-line"></i>
+                                    <p>User</p>
                                 </StyledNavLink>
+                            </CNavItem>
+                            <CNavItem>
+                                <LogoutButton><i class="ri-logout-circle-r-line"></i>Sair</LogoutButton>
                             </CNavItem>
                         </CNavbarNav>
                     </COffcanvasBody>
